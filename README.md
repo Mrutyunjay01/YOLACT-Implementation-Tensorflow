@@ -13,3 +13,7 @@ Finally, by incorporating deformable convolutions into the backbone network, opt
 and aspect ratios, and adding a novel fast mask re-scoring branch, our YOLACT++ model can achieve 34:1 mAP on MS COCO at 33:5
 fps, which is fairly close to the state-of-the-art approaches while still running at real-time.
 >> Ref : arXiv:1912.06218v1 [cs.CV] 3 Dec 2019
+
+- Repo References:
+[https://github.com/leohsuofnthu/Tensorflow-YOLACT]
+[https://github.com/dbolya/yolact]
