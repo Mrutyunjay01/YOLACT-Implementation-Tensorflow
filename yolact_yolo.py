@@ -9,14 +9,14 @@ from utils.create_prior import make_priors
 assert tf.__version__.startswith('2')
 
 
-class Yolact(tf.keras.Model):
+class YolactYolo(tf.keras.Model):
     """
         Creating the YOLCAT Architecture
         Arguments:
     """
 
     def __init__(self, input_size, fpn_channels, feature_map_size, num_class, num_mask, aspect_ratio, scales):
-        super(Yolact, self).__init__()
+        super(YolactYolo, self).__init__()
         base_model = make_yolov3_model()
         weight_reader = WeightReader('/content/yolov3.weights')  # path to yolov3 weights
         weight_reader.load_weights(base_model)
