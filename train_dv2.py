@@ -16,13 +16,13 @@ tf.random.set_seed(1234)
 
 FLAGS = flags.FLAGS
 
-flags.DEFINE_string('tfrecord_dir', './data/coco',
+flags.DEFINE_string('tfrecord_dir', 'TFdir_custom/',
                     'directory of tfrecord')
 flags.DEFINE_string('weights', './weights',
                     'path to store weights')
-flags.DEFINE_integer('train_iter', 800000,
+flags.DEFINE_integer('train_iter', 125,
                      'iteraitons')
-flags.DEFINE_integer('batch_size', 8,
+flags.DEFINE_integer('batch_size', 1,
                      'batch size')
 flags.DEFINE_float('lr', 1e-3,
                    'learning rate')
@@ -32,9 +32,9 @@ flags.DEFINE_float('weight_decay', 5 * 1e-4,
                    'weight_decay')
 flags.DEFINE_float('print_interval', 10,
                    'number of iteration between printing loss')
-flags.DEFINE_float('save_interval', 10000,
+flags.DEFINE_float('save_interval', 8,
                    'number of iteration between saving model(checkpoint)')
-flags.DEFINE_float('valid_iter', 5000,
+flags.DEFINE_float('valid_iter', 20,
                    'number of iteration between saving validation weights')
 
 

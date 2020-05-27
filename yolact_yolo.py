@@ -18,11 +18,11 @@ class YolactYolo(tf.keras.Model):
     def __init__(self, input_size, fpn_channels, feature_map_size, num_class, num_mask, aspect_ratio, scales):
         super(YolactYolo, self).__init__()
         base_model = make_yolov3_model()
-        weight_reader = WeightReader('/content/yolov3.weights')  # path to yolov3 weights
+        weight_reader = WeightReader('yolov3.weights')  # path to yolov3 weights
         weight_reader.load_weights(base_model)
 
-        self.backbone_yolo = tf.python.keras.Model(input=base_model.input,
-                                                   output=base_model.output)
+        self.backbone_yolo = tf.keras.Model(inputs=base_model.input,
+                                            outputs=base_model.output)
 
         self.backbone_fpn = FeaturePyramidNeck(fpn_channels)
         self.protonet = ProtoNet(num_mask)
